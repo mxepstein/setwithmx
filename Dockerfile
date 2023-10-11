@@ -11,7 +11,7 @@ RUN npm install -g firebase-tools
 WORKDIR /app
 
 # Copy your application files into the container
-COPY . .
+COPY . /app
 
 # Install application dependencies in the root folder
 RUN npm install
@@ -29,4 +29,4 @@ WORKDIR /app
 # EXPOSE 3000
 
 # Define the startup command to start the project
-CMD [ "npm run dev" ]
+CMD ["npm", "run","dev"]
